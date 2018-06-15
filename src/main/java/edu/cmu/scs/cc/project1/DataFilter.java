@@ -1,5 +1,8 @@
 package edu.cmu.scs.cc.project1;
 
+import org.apache.commons.lang3.StringUtils;
+
+>>>>>>> 5a6542b53863a20a5be8cbf8f55a084db2eac1f2
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,6 +15,10 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Map.Entry;
 import java.util.TreeMap;
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * <p>Implement data filter with test-driven development.</p>

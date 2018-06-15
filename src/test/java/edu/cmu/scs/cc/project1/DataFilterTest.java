@@ -40,10 +40,6 @@ class DataFilterTest {
 
     @Test
     void checkDomain() {
-        assertTrue(DataFilter.checkDomain(
-                DataFilter.getColumns("en Carnegie_Mellon_University 34 0")));
-        assertTrue(DataFilter.checkDomain(
-                DataFilter.getColumns("en.m Carnegie_Mellon_University 34 0")));
         assertFalse(DataFilter.checkDomain(
                 DataFilter.getColumns("fr Carnegie_Mellon_University 34 0")));
     }
