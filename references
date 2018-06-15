@@ -1,0 +1,18 @@
+{
+  "referenceGuide":"Cite all the reference sources in the required format. Proper citations will help you avoid unnecessary trouble but does not make it acceptable to copy code. Read the course and university policy statements in this regard. When working with others, limit the discussion to block diagrams and arrows. Do not look at another students' code. Read the JSON semantics and make use of JSON validator from the Internet if needed.",
+  "websites":[
+    {
+      "title":"Java 101: Regular expressions in Java, Part 1",
+      "url":"https://www.javaworld.com/article/3188545/learn-java/java-101-regular-expressions-in-java-part-1.html",
+      "code":"Used in checkFistLetter to check if the first character with [a-z]",
+      "description":"Decided not use the Pattern matching"
+    },
+     {
+          "title":"Checking Character Properties",
+          "url":"https://docs.oracle.com/javase/tutorial/i18n/text/charintro.html",
+          "code":"Used in checkFistLetter to check if the first character with [a-z]",
+          "description":"Went with this approach since it is the official way of checking the character properties"
+        }
+
+  ]
+}
