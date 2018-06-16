@@ -147,9 +147,9 @@ public final class DataFilter {
     public static void main(final String[] args) throws IOException {
         // modify and make the try-with-resources statement encoding aware
         try (PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(
-                new FileOutputStream("out qput")), true);
+                new FileOutputStream("output"), "UTF-8"), true);
              BufferedReader br = new BufferedReader(
-                     new InputStreamReader(System.in))) {
+                     new InputStreamReader(System.in,"UTF-8"))) {
             // do not change the code below
             TreeMap<String, Integer> pageviewMap = new TreeMap<>();
             String page;

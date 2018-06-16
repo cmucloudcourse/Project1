@@ -67,7 +67,7 @@ cleanup() {
   #
   # Standard output format:
   # No standard output needed
-  :
+  mvn clean
 }
 
 ################################################################################
