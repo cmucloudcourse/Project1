@@ -1,17 +1,18 @@
 package edu.cmu.scs.cc.project1;
 
-import javax.xml.crypto.Data;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.TreeMap;
 
 import static edu.cmu.scs.cc.project1.DataFilter.checkAllRules;
 
 public class Mapper {
 
-    private static final int DOMAIN = 0, TITLE = 1, ACCESS = 2, DATE =1 ;
+    private static final int TITLE = 1;
+    private static final int ACCESS = 2;
+    private static final int DATE =1 ;
 
     public static void main(String[] args) throws IOException {
         try (BufferedReader br = new BufferedReader(

@@ -7,7 +7,8 @@ import java.nio.charset.StandardCharsets;
 
 public class Reducer {
 
-    private static final int TITLE = 0, ACCESS = 1;
+    private static final int TITLE = 0;
+    private static final int ACCESS = 1;
 
     public static void main(String[] args) {
         try (BufferedReader br = new BufferedReader(
