@@ -28,7 +28,8 @@ public class Reducer {
                     if (currentTitle != null && currentTitle.equals(title)) {
                         access_total = access_total + access_current;
                     } else {
-                        if (currentTitle != null) //new word is encounterd{
+                        //new word is encounterd{
+                        if (currentTitle != null)
                             System.out.println(currentTitle + "\t" + access_total);
 
                         currentTitle = title;
