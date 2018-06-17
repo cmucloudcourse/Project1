@@ -58,6 +58,8 @@ class DataFilterTest {
                 DataFilter.getColumns("en - 34 0")));
         assertFalse(DataFilter.checkSpecialPage(
                 DataFilter.getColumns("en %2D 34 0")));
+        assertTrue(DataFilter.checkSpecialPage(DataFilter.getColumns("en Main_Pager 481324 0")));
+        assertTrue(DataFilter.checkSpecialPage(DataFilter.getColumns("en.m -da 382871 0")));
     }
 
     @Test
@@ -96,6 +98,9 @@ class DataFilterTest {
                 DataFilter.getColumns("en.m 0robots.txt 34 0")));
         assertTrue(DataFilter.checkFirstLetter(
                 DataFilter.getColumns("en.m ∂abc 34 0")));
+        assertTrue(DataFilter.checkFirstLetter(
+                DataFilter.getColumns("en.m -BZaWKWmbnHbCeqtnVtUciLFfFem 484906 0")));
+
     }
 
     @Test
@@ -110,5 +115,11 @@ class DataFilterTest {
                 DataFilter.getColumns("en.m 0robots.txt 34 0")));
         assertTrue(DataFilter.checkAllRules(
                 DataFilter.getColumns("en.m ∂abc 34 0")));
+    }
+
+    @Test
+    void testPercentDecoding(){
+        System.out.println(PercentDecoder.decode( "XpMbjcqZMIejBmvwhLKkfxSBIiwZQx%2D%60%3E").toLowerCase());
+
     }
 }

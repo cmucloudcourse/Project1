@@ -156,7 +156,7 @@ public final class DataFilter {
             }
             LinkedList<Entry<String, Integer>> linkedList = sortRecords(pageviewMap);
             for (Entry<String, Integer> entry : linkedList) {
-                printWriter.print(entry.getKey() + "\t" + entry.getValue() + "\n");
+                printWriter.print(PercentDecoder.decode(entry.getKey()) + "\t" + entry.getValue() + "\n");
             }
         }
     }
@@ -251,7 +251,7 @@ public final class DataFilter {
      */
     static boolean checkSpecialPage(final String[] columns) {
         //the lambda returns true if the page is a special page and then inversion of the boolean value occurs.
-        return !Arrays.stream(SPECIAL_PAGES).parallel().anyMatch(columns[TITLE]::contains);
+        return !Arrays.stream(SPECIAL_PAGES).parallel().anyMatch(PercentDecoder.decode(columns[TITLE])::equals);
     }
 
     /**
@@ -275,7 +275,7 @@ public final class DataFilter {
      * @return false if the title ends with any blacklisted suffix
      */
     static boolean checkSuffix(final String[] columns) {
-        return !StringUtils.endsWithAny(columns[TITLE].toLowerCase(), SUFFIX_BLACKLIST);
+        return !StringUtils.endsWithAny(PercentDecoder.decode(columns[TITLE]).toLowerCase(), SUFFIX_BLACKLIST);
     }
 
     /**
