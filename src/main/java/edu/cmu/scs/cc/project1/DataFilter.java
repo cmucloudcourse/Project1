@@ -2,18 +2,9 @@ package edu.cmu.scs.cc.project1;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.FileOutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * <p>Implement data filter with test-driven development.</p>
@@ -59,11 +50,9 @@ public final class DataFilter {
     /**
      * Column Name.
      */
-    private static final int DOMAIN = 0, TITLE = 1, ACCESS = 2;
-    /**
-     * Column length.
-     */
-    private static final int CLEAN_DATA_LENGTH = 4;
+    private static final int DOMAIN = 0;
+    private static final int TITLE = 1;
+    private static final int ACCESS = 2;
 
     /**
      * Prefix blacklist.
@@ -147,9 +136,9 @@ public final class DataFilter {
     public static void main(final String[] args) throws IOException {
         // modify and make the try-with-resources statement encoding aware
         try (PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(
-                new FileOutputStream("out qput")), true);
+                new FileOutputStream("output"), "UTF-8"), true);
              BufferedReader br = new BufferedReader(
-                     new InputStreamReader(System.in))) {
+                     new InputStreamReader(System.in,"UTF-8"))) {
             // do not change the code below
             TreeMap<String, Integer> pageviewMap = new TreeMap<>();
             String page;
@@ -241,8 +230,7 @@ public final class DataFilter {
      * @return true if length == 4
      */
     static boolean checkDataLength(final String[] columns) {
-        boolean flag = columns.length == 4 ? true : false;
-        return flag;
+        return columns.length == 4 ? true : false;
     }
 
     /**
@@ -252,8 +240,7 @@ public final class DataFilter {
      * @return true if the domain code is en or en.m
      */
     static boolean checkDomain(final String[] columns) {
-        boolean flag =  (columns[DOMAIN].equals("en") || columns[DOMAIN].equals("en.m")) ? true : false;
-        return flag;
+        return (columns[DOMAIN].equals("en") || columns[DOMAIN].equals("en.m")) ? true : false;
     }
 
     /**
