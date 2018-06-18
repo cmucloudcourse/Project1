@@ -51,6 +51,7 @@ public class ParseDateValue {
                 out.print("\t"+l);
             }
             out.print("\n");
+            out.flush();
         }
 
 //        err.print("title : "+title+" does NOT has more views than cutoff\n");
