@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 import static edu.cmu.scs.cc.project1.DataFilter.checkAllRules;
+import static java.lang.System.err;
 
 public class Mapper {
 
@@ -26,6 +27,7 @@ public class Mapper {
                                 new OutputStreamWriter(System.out, "UTF-8"), true);
 
                         out.print(PercentDecoder.decode(columns[TITLE])+"\t"+getDate(System.getenv("mapreduce_map_input_file"))+"|::|"+columns[ACCESS]+"\n");
+                        out.flush();
                     } catch (NumberFormatException e) {
                         //ignore it
                     }
