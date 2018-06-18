@@ -2,6 +2,7 @@ package edu.cmu.scs.cc.project1;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -38,7 +39,7 @@ class ParseDateValueTest {
     }
 
     @Test
-    void parseData() {
+    void parseData() throws UnsupportedEncodingException {
         Map<String,Long> testMap = new TreeMap<>();
         testMap.put("20161101",50l);
         testMap.put("20161102",40l);
