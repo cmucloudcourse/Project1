@@ -49,7 +49,7 @@ setup() {
   #
   # Examples:
   # mvn clean package
-  # pip3 install -r requirements.txt
+  pip3 install pandas
   #
   # Standard output format:
   # No standard output needed
@@ -233,7 +233,7 @@ q1() {
   # 50%,151206.50,4221.00,...,4616.50
   # 75%,228864.00,6332.75,...,6835.00
   # max,17838479.00,438908.00,...,1169461.00
-  :
+  python3 q1.py
 }
 
 q2() {

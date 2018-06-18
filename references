@@ -25,6 +25,18 @@ Java 8 Sum: Array, Map and List Collection Example using reduce() and collect() 
       "url":"https://www.concretepage.com/java/jdk-8/java-8-sum-array-map-and-list-collection-example-using-reduce-and-collect-method",
       "code":"Used in ParseDateValue",
       "description":"This was explored to add the total no of views from the map"
+    },
+    {
+      "title":"Linux and Unix sort command tutorial with examples"
+      "url":"https://shapeshed.com/unix-sort/"
+      "code":"Used in reverse sorting the mapred_output",
+      "description":"Sort the values in mapred_output in descending order"
+    },
+    {
+      "title":"Sort by second column numeric values"
+      "url":"https://www.unix.com/unix-for-advanced-and-expert-users/262294-sort-second-column-numeric-values.html"
+      "code":"Used in sorting the mapred file numerically based on views",
+      "description":"Used in sorting the mapred file numerically based on views"
     }
 
 
