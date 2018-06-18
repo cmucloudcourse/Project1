@@ -22,7 +22,7 @@ public class Mapper {
                 String[] columns = DataFilter.getColumns(page);
                 if (checkAllRules(columns)) {
                     try {
-                        System.out.println(columns[TITLE]+"-"+getDate(System.getenv("mapreduce_map_input_file"))+"\t"+columns[ACCESS]);
+                        System.out.print(PercentDecoder.decode(columns[TITLE])+"\t"+getDate(System.getenv("mapreduce_map_input_file"))+"|::|"+columns[ACCESS]+"\n");
                     } catch (NumberFormatException e) {
                         //ignore it
                     }
@@ -32,8 +32,8 @@ public class Mapper {
         }
     }
 
-    private static String getDate(String fileName){
+    static String getDate(String fileName){
         String[] tokens = fileName.split("-");
-        return tokens[DATE];
+        return tokens[tokens.length-2];
     }
 }
