@@ -7,12 +7,26 @@
       "code":"Used in checkFistLetter to check if the first character with [a-z]",
       "description":"Decided not use the Pattern matching"
     },
-     {
-          "title":"Checking Character Properties",
-          "url":"https://docs.oracle.com/javase/tutorial/i18n/text/charintro.html",
-          "code":"Used in checkFistLetter to check if the first character with [a-z]",
-          "description":"Went with this approach since it is the official way of checking the character properties"
-        }
+    {
+      "title":"Checking Character Properties",
+      "url":"https://docs.oracle.com/javase/tutorial/i18n/text/charintro.html",
+      "code":"Used in checkFistLetter to check if the first character with [a-z]",
+      "description":"Did not go with this approach as this is not encoding aware"
+    },
+    {
+      "title":"Java 8 Streams: An Intro to Filter, Map and Reduce Operations",
+      "url":"https://www.sitepoint.com/java-8-streams-filter-map-reduce/",
+      "code":"Used in ParseDateValue",
+      "description":"This was explored to add the total no of views from the map"
+    },
+    {
+      "title":"
+Java 8 Sum: Array, Map and List Collection Example using reduce() and collect() Method",
+      "url":"https://www.concretepage.com/java/jdk-8/java-8-sum-array-map-and-list-collection-example-using-reduce-and-collect-method",
+      "code":"Used in ParseDateValue",
+      "description":"This was explored to add the total no of views from the map"
+    }
+
 
   ]
 }
