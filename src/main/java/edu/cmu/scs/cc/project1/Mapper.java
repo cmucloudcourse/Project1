@@ -16,7 +16,7 @@ public class Mapper {
 
     public static void main(String[] args) throws IOException {
         try (BufferedReader br = new BufferedReader(
-                     new InputStreamReader(new FileInputStream(System.getenv("mapreduce_map_input_file")), StandardCharsets.UTF_8))) {
+                     new InputStreamReader(System.in, StandardCharsets.UTF_8))) {
             String page;
             while ((page = br.readLine()) != null) {
                 String[] columns = DataFilter.getColumns(page);
@@ -33,6 +33,7 @@ public class Mapper {
     }
 
     static String getDate(String fileName){
+        System.getenv("mapreduce_map_input_file");
         String[] tokens = fileName.split("-");
         return tokens[tokens.length-2];
     }
