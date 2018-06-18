@@ -141,7 +141,7 @@ map() {
   # Tab-separated key-value pairs based on your design
   #
   # Note: the program must be encoding aware
-  java -cp project1.jar edu.cmu.scs.cc.project1.Mapper
+  java -cp ./target/project1.jar edu.cmu.scs.cc.project1.Mapper
 }
 
 reduce() {
@@ -161,7 +161,7 @@ reduce() {
   # monthly_view  page_title daily_view ... daily_view (i.e. in TSV format)
   #
   # Note: the program must be encoding aware
-  java -cp project1.jar edu.cmu.scs.cc.project1.Reducer
+  java -cp ./target/project1.jar edu.cmu.scs.cc.project1.Reducer
 }
 
 ################################################################################
